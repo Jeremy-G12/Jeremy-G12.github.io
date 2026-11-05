@@ -1,11 +1,11 @@
-let racerXs = [30,40,30, 80, 30, 30, 30, 30, 30, 30];
+let racerXs = [30, 30, 30, 30];
 let startY = 90;
 let yStep = 60;
 let finishX = 560;
-let speed = 5;
+let speed = 50;
 
 function setup() {
-    createCanvas(600, startY + yStep * racerXs.length);
+    createCanvas(600, startY + yStep * racerXs.length + 8000);
 }
 function draw() {
   background(240);
@@ -20,11 +20,13 @@ function draw() {
     }
     circle(racerXs[i], y, 24);
   }
-    if (key == 'r') {
+   if (keyIsDown("r")) {
       for (let i = 0; i < racerXs.length; i++) {
         racerXs[i] = 30;
       }
+    }
       if (key == 's') {
+        racerXs.push("30, 30, 30, 30")
     }
   }
-}
+
