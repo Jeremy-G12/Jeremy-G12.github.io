@@ -16,7 +16,7 @@ function draw() {
       racerXs[i] += random(-3, speed);
     }
     if (racerXs[i] >= finishX) {
-      racerXs[i] += random(-500, -405);
+      racerXs[i] += random(-9000, 85);
     }
     circle(racerXs[i], y, 24);
   }
