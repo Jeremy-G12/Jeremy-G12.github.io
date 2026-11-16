@@ -3,14 +3,14 @@ let defaultColor = 10;
 let brush = 50;
 let amount = 3000;
 class Circle {
-  constructor() {
+constructor() {
     this.x = random() * 800 + 50;
     this.y = random() * 600 + 50;
     this.diameter = ballSize;
     this.randomizeColor();
   }
 
-  randomizeColor() {
+randomizeColor() {
     this.hue = Math.floor(random() * 360);
   }
 

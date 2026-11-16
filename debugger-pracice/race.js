@@ -1,14 +1,13 @@
-let racerXs = [0, 4, 8];
-let moves = [7, 4, 2];
+let prices = [6, 4, 9];
+let quantities = [2, 3, 1];
+let total = 0;
 
-for (let round = 1; round <= 3; round++) {
-  for (let i = 0; i < racerXs.length; i++) {
-    racerXs[i] += moves[i];
-    if (racerXs[i] > 12) {
-      moves[round - 1] -= 1;
-    }
-}
+for (let i = 0; i <= prices.length; i++) {
+  let lineTotal = prices[i] * quantities[i];
+  if (quantities[i] >= 2) {
+    lineTotal -= quantities[i];
+  }
+  total += lineTotal;
 }
 
-console.log("Positions:", racerXs);
-console.log("Moves:", moves);
+console.log("Total:", total);
